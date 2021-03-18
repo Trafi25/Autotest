@@ -58,15 +58,17 @@ public class HomePage {
         return temp;
     }
 
-    public void Linker (String path){
+    public String Linker (String path){
         driver.findElement(By.xpath(path)).click();
-        String winHandleBefore = driver.getWindowHandle(); //save the current window handle
+        String pas;
+        String winHandleBefore = driver.getWindowHandle();
         for(String winHandle : driver.getWindowHandles()){
             driver.switchTo().window(winHandle);
-        } //switch window
+        }
+        pas= driver.getCurrentUrl();
         driver.close();
-        driver.switchTo().window(winHandleBefore); //switch again to the first window
-
+        driver.switchTo().window(winHandleBefore);
+        return pas;
     }
 
     public void Matchvideo(){
@@ -74,6 +76,10 @@ public class HomePage {
         driver.findElement(By.xpath("//*[@id=\"Menu\"]/li[7]/a")).click();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id=\"esportsHomepageAppMount\"]/div/div[4]/section[1]/div[1]/div/div[1]/a[1]")).click();
+        String winHandleBefore = driver.getWindowHandle(); //save the current window handle
+        for(String winHandle : driver.getWindowHandles()){
+            driver.switchTo().window(winHandle);
+        }
 
     }
 

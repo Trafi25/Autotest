@@ -18,8 +18,9 @@ public class VideoTest {
         homePage.open();
 
         homePage.Matchvideo();
-        String InstT="Киберспорт - Hearthstone";
-        Assert.assertTrue(driver.getTitle().equals(InstT));
+
+        String InstT="https://www.youtube.com/";
+        Assert.assertTrue(driver.getCurrentUrl().equals(InstT));
 
 }
 }
