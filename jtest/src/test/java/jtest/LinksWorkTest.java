@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import javax.print.DocFlavor;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-/*
+
 public class LinksWorkTest {
     @Test
 
