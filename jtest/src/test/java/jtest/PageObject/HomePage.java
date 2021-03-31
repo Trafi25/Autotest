@@ -2,6 +2,7 @@ package jtest.PageObject;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -48,7 +49,8 @@ public class HomePage {
 
     public void open() {
         driver.get("https://playhearthstone.com/ru-ru");
-        driver.manage().window().maximize();
+        Dimension d = new Dimension(1382,744);
+        driver.manage().window().setSize(d);
     }
 
     public String GetBattleTag(){
