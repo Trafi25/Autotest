@@ -14,7 +14,20 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class LinksWorkTest {
-    
+    @Test
+    public void LinksWorkTest1() {
+        WebDriver driver= new ChromeDriver();
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        homePage.open();
+        String checkpass;
+        String truepass;
+
+        String path = "//*[@id=\"__next\"]/div[3]/div[10]/div/div/span[2]/span/div[2]/a/div";
+        checkpass = homePage.Linker(path);
+        System.out.println(checkpass);
+        truepass="https://www.youtube.com/user";
+        Assert.assertTrue(checkpass.equals(truepass));
+    }
     @Test
     public void LinksWorkTest2() {
 
@@ -32,7 +45,22 @@ public class LinksWorkTest {
 
     }
 
-   
+    @Test
+    public void LinksWorkTest3() {
+
+        WebDriver driver= new ChromeDriver();
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        homePage.open();
+        String checkpass;
+        String truepass;
+
+        String path = "//*[@id=\"__next\"]/div[3]/div[10]/div/div/span[2]/span/div[4]/a/div";
+        checkpass = homePage.Linker(path);
+        System.out.println(checkpass);
+        truepass="https://www.instagram.com/playhearthstone/";
+        Assert.assertTrue(checkpass.equals(truepass));
+
+    }
 
 
 }
