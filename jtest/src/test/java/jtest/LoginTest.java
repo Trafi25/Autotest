@@ -22,10 +22,7 @@ public class LoginTest {
         WebDriver driver= new ChromeDriver();
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.open();
-        driver.findElement(By.xpath("//div[@class=\"Navbar-label Navbar-accountUnauthenticated\"]")).click();
-        WebElement header = driver.findElement(By.xpath("//div[@class=\"Navbar-accountDropdownLoggedOut\"]"));
-        header.findElement(Login).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(AccountName));
+        homePage.Authorization();
         String BattleTag = "Среброкрыл#231501";
 
        LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
