@@ -12,9 +12,10 @@ import org.openqa.selenium.support.PageFactory;
 import javax.print.DocFlavor;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-
+/*
 public class LinksWorkTest {
     @Test
+
     public void LinksWorkTest1() {
         WebDriver driver= new ChromeDriver();
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -64,3 +65,5 @@ public class LinksWorkTest {
 
 
 }
+*/
+
