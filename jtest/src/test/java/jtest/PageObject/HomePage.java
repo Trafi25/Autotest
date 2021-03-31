@@ -75,7 +75,8 @@ public class HomePage {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id=\"Menu\"]/li[7]/a")).click();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("//*[@id=\"esportsHomepageAppMount\"]/div/div[4]/section[1]/div[1]/div/div[1]/a[1]")).click();
+        driver.findElement(By.xpath("//*[@id=\"esportsHomepageAppMount\"]/div/div[3]/section[1]/div[1]/div/div[1]/a[2]")).click();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         String winHandleBefore = driver.getWindowHandle(); //save the current window handle
         for(String winHandle : driver.getWindowHandles()){
             driver.switchTo().window(winHandle);

@@ -21,7 +21,7 @@ public class NewsTest {
         driver.findElement(By.xpath("//*[@id=\"Menu\"]/li[6]/div/div/ul/li[2]/a")).click();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id=\"NewsHome\"]/div/div[2]/div[2]/a[1]")).click();
-        String NewsUrl= "https://playhearthstone.com/ru-ru/news/23624689/opisanie-obnovleniya-19-6";
+        String NewsUrl= "https://playhearthstone.com/ru-ru/news/23642550/opisanie-obnovleniya-20-0";
         Assert.assertTrue(driver.getCurrentUrl().equals(NewsUrl));
 
 }}

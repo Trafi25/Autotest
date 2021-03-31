@@ -18,8 +18,7 @@ public class VideoTest {
         homePage.open();
 
         homePage.Matchvideo();
-
-        String InstT="https://www.youtube.com/";
+        String InstT="https://www.youtube.com/watch?v=Rv9sIPL-ELY";
         Assert.assertTrue(driver.getCurrentUrl().equals(InstT));
 
 }

@@ -22,10 +22,10 @@ public class LinksWorkTest {
         String checkpass;
         String truepass;
 
-        String path = "//*[@id=\"__next\"]/div[3]/div[10]/div/div/span[2]/span/div[2]/a/div";
+        String path = "//*[@id=\\\"__next\\\"]/div/div[10]/div/div/span[2]/span/div[1]/a/div\"";
         checkpass = homePage.Linker(path);
         System.out.println(checkpass);
-        truepass="https://www.youtube.com/user";
+        truepass="https://www.youtube.com/c/HearthstoneRU/featured";
         Assert.assertTrue(checkpass.equals(truepass));
     }
     @Test
@@ -37,7 +37,7 @@ public class LinksWorkTest {
         String checkpass;
         String truepass;
 
-        String path = "//*[@id=\"__next\"]/div[3]/div[10]/div/div/span[2]/span/div[1]/a/div";
+        String path = "//*[@id=\"__next\"]/div/div[10]/div/div/span[2]/span/div[1]/a/div";
         checkpass = homePage.Linker(path);
         System.out.println(checkpass);
         truepass="https://twitter.com/hearthstone_ru";
@@ -54,7 +54,7 @@ public class LinksWorkTest {
         String checkpass;
         String truepass;
 
-        String path = "//*[@id=\"__next\"]/div[3]/div[10]/div/div/span[2]/span/div[4]/a/div";
+        String path = "//*[@id=\"__next\"]/div/div[10]/div/div/span[2]/span/div[4]/a/div";
         checkpass = homePage.Linker(path);
         System.out.println(checkpass);
         truepass="https://www.instagram.com/playhearthstone/";
