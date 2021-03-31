@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.concurrent.TimeUnit;
-/*
+
 public class LoginTest {
 
     @Test
@@ -32,5 +32,5 @@ public class LoginTest {
        Assert.assertTrue(homePage.GetBattleTag().equals(BattleTag));
     }
 }
-*/
+
 

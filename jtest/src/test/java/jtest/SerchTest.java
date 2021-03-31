@@ -14,7 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.concurrent.TimeUnit;
-/*
+
 public class SerchTest {
     @Test
     public void SerchTest() {
@@ -33,4 +33,4 @@ public class SerchTest {
     }
 }
 
- */
+

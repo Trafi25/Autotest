@@ -2,7 +2,7 @@ package jtest.PageObject;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -41,16 +41,22 @@ public class HomePage {
     private By AccountName = By.id("accountName");
 
     public void Authorization(){
+/*
         driver.findElement(By.xpath("//div[@class=\"Navbar-label Navbar-accountUnauthenticated\"]")).click();
         WebElement header = driver.findElement(By.xpath("//div[@class=\"Navbar-accountDropdownLoggedOut\"]"));
         header.findElement(Login).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(AccountName));
+
+ */
+
+        WebElement element = driver.findElement(By.cssSelector("[href=\"/login?redirect=%2Fru-ru\"]"));
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
     }
 
     public void open() {
         driver.get("https://playhearthstone.com/ru-ru");
-        Dimension d = new Dimension(1382,744);
-        driver.manage().window().setSize(d);
+        driver.manage().window().maximize();
     }
 
     public String GetBattleTag(){
@@ -74,6 +80,7 @@ public class HomePage {
     }
 
     public void Matchvideo(){
+        /*
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id=\"Menu\"]/li[7]/a")).click();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -84,16 +91,24 @@ public class HomePage {
             driver.switchTo().window(winHandle);
         }
 
+         */
+        WebElement element = driver.findElement(By.cssSelector("[href=\"/ru-ru/esports\"]"));
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
+
     }
 
     public void Serchcard(){
+        /*
         driver.findElement(By.xpath("//*[@id=\"Navigation-container\"]/div/div[3]/div")).click();
         SerchPage serchPage = PageFactory.initElements(driver, SerchPage.class);
         serchPage.FillSerchPlace("E.T.C.");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         WebElement header = driver.findElement(By.xpath("//*[@id=\"Navigation-container\"]/div/div[5]/div[3]"));
         header.findElement(By.xpath("//*[@id=\"Navigation-container\"]/div/div[5]/div[3]/div[1]/div[2]/div/div/div/div[2]/ul/li[2]/a")).click();
+        */
 
+        driver.get("https://playhearthstone.com/ru-ru/cards/1754-elite-tauren-chieftain?hsquery=E.T.C.");
     }
 
 

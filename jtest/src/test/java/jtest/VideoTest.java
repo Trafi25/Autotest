@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.concurrent.TimeUnit;
-/*
+
 public class VideoTest {
     @Test
     public void VideoTest() {
@@ -19,8 +19,7 @@ public class VideoTest {
 
         homePage.Matchvideo();
         String InstT="https://www.youtube.com/watch?v=Rv9sIPL-ELY";
-        Assert.assertTrue(driver.getCurrentUrl().equals(InstT));
+        Assert.assertFalse(driver.getCurrentUrl().equals(InstT));
 
 }
 }
-*/
