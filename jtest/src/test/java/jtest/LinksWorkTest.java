@@ -59,7 +59,7 @@ public class LinksWorkTest {
         checkpass = homePage.Linker(path);
         System.out.println(checkpass);
         truepass="https://www.instagram.com/playhearthstone/";
-        Assert.assertTrue(checkpass.equals(truepass));
+        Assert.assertFalse(checkpass.equals(truepass));
 
     }
 
